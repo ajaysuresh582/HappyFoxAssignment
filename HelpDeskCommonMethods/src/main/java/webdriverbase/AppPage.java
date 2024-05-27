@@ -31,11 +31,12 @@ public class AppPage {
 	public static String WINDOWS_PATH_TO_TEST_DATA_DIR = "src/main/resources/";
 	public static int WAIT_TIME_SEC = 60;	
 	protected WebDriver driver ;
-	////
+
 	JavascriptExecutor javaScriptExecutor;
 	
 	public AppPage(WebDriver driver) {
 		this.driver = driver;
+		
 		waitImplicitly();	
 		PageFactory.initElements(driver, this);
 		maximizeWindow();
@@ -66,15 +67,18 @@ public class AppPage {
 	}
 	
 	public void clearAndType(WebElement element, String text) {
+		
 		element.clear();
 		element.sendKeys(text);
 	}
 	
 	public void switchToDefaultContent() {
+		
 		this.driver.switchTo().defaultContent();
 	}
 	
 	public void switchToFrame(WebElement frame) {
+		
 		this.driver.switchTo().frame(frame);
 	}
 	
@@ -91,6 +95,7 @@ public class AppPage {
 	
 	public void scrolltoElement(String locator) {
 		try {
+			
 			WebElement element = this.driver.findElement(By.xpath(locator));
 
 			scrolltoElement(element);
@@ -101,7 +106,7 @@ public class AppPage {
 	
 	public void scrolltoElement(WebElement element) throws InterruptedException {
 		getJavaScriptExecutor().executeScript("arguments[0].scrollIntoView(false)", element);
-		Thread.sleep(1000);
+		 Thread.sleep(1000);
 	}
 	
 	public void waitForVisible(WebElement element) {
@@ -128,7 +133,7 @@ public class AppPage {
 			path = WINDOWS_PATH_TO_TEST_DATA_DIR;
 		return (getCurrentWorkingDirectory()+ path+ fileName);
 	}
-	
+//	
 	public enum OSType {
 	    Windows, MacOS, Linux, Other
 	  };
