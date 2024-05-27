@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeSuite;
 public class BaseTest {
 	
     private WebDriver driver;
-
+//
     @BeforeSuite
     public void beforeSuite() {
     	
