@@ -9,20 +9,18 @@ import CustomerPortal.SupportPortalPage;
 public class AdminPortalTest2 extends CommonTests1 {
   
   @Test
-  public void Scenario2() {
+  public void Scenario2(){
 	  
 	  String Methodname = new Object(){}.getClass().getEnclosingMethod().getName(); 
 		
 		try {
-			
 			String Classname = getClass().getSimpleName();
             System.out.println("start of method : " + Classname);
             loginasAdmin();
             TestCase1();
             TestCase2();
             TestCase3();
-              
-		}
+ 		}
 		
 		catch(Throwable t) {
 			 t.printStackTrace();
