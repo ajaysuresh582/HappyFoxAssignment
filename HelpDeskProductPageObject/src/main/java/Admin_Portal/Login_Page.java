@@ -12,12 +12,15 @@ static class BasePage {
 
         public BasePage(WebDriver driver) {
             this.driver = driver;
+            
         }
     }
 
     static class LoginPage extends BasePage {
+    	
         public LoginPage(WebDriver driver) {
             super(driver);
+            
         }
 
         public void login(String username, String password) {
@@ -25,6 +28,7 @@ static class BasePage {
             driver.findElement(By.id("username")).sendKeys(username);
             driver.findElement(By.id("password")).sendKeys(password);
             driver.findElement(By.id("loginButton")).click();
+            
         }
 
         public void forgotPassword() {
@@ -33,21 +37,26 @@ static class BasePage {
     }
 
     static class HomePage extends BasePage {
+    	
         public HomePage(WebDriver driver) {
             super(driver);
         }
 
         public void verifyHomePage() {
+        	
             if (!driver.getCurrentUrl().equals("https://www.happyfox.com/home")) {
+            	
                 throw new IllegalStateException("Not on the home page");
             }
         }
 
         public void navigateToProfile() {
             driver.findElement(By.id("profileLink")).click();
+            
         }
 
     public class TablePage extends BasePage {
+    	
 
     private By rowLocator = By.xpath("//table[@id='dataTable']/tbody/tr");
 
