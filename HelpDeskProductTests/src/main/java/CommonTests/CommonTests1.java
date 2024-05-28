@@ -22,7 +22,8 @@ public Login_Page hploginpage;
 public SupportPortalPage hpSupportPortalPage;
 public AdminPortalTest1stPage hpAdminPortalTest1;
 public AdminPortalTest2ndPage hpAdminPortalTest2;
-	
+
+
 public String AdminPortalURL = "https://interview.supporthive.com/staff";
 public static String SupportTicketURL = "https://interview.supporthive.com/new/";
 public static String browser = "Chrome";
@@ -42,6 +43,7 @@ public void loginasAdmin() {
 
 	try
 	{	
+		
 		hploginpage = new Login_Page(getDriver());
 		hploginpage.navigateToHappyFoxHomePageURL(AdminPortalURL);
 		hploginpage.enterUsername(username);
@@ -51,8 +53,7 @@ public void loginasAdmin() {
 		hploginpage.clickLoginbutton();
 		System.out.println("login clicked");
 		hpAdminPortalTest1=hploginpage.validatePendingTicketsTitle();
-		
-		
+				
 	}
  
 	catch(Throwable t)
@@ -71,7 +72,6 @@ public void loginasAdmin() {
 	  
 	  try 
 	  {
-		    
 		  hpSupportPortalPage = new SupportPortalPage(getDriver());
 		  hpSupportPortalPage.navigateToHappyFoxSupportPortalURL(SupportTicketURL);
 		  hpSupportPortalPage.enterSubject(Subject);
@@ -94,9 +94,7 @@ public void loginasAdmin() {
   }
   
   public void TestCase1() {
-		
 		try {
-			
 			String Classname = getClass().getSimpleName();
           System.out.println("start of method : " + Classname);
           hpAdminPortalTest1=hploginpage.validatePendingTicketsTitle();
@@ -122,7 +120,6 @@ public void loginasAdmin() {
           hpAdminPortalTest1.clickAddPriority();
           hpAdminPortalTest1.setDefaultPriroity(priorityName);
           System.out.println("Priority added");    
-				
 		} 
 		
 		catch (Throwable e) {
