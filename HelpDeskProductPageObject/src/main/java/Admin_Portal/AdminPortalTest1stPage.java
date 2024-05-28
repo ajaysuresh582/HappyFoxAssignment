@@ -11,14 +11,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import webdriverbase.AppPage;
 
-public class AdminPortalTest1stPage extends AppPage {
+public class AdminPortalTest1stPage extends AppPage{
 
 	public AdminPortalTest1stPage(WebDriver driver) {
 		super(driver);
 		
 	}
-	
-	
+		
 	@FindBy(xpath = "//span[@class='hf-top-bar_title_text hf-font-light']")
 	private WebElement Title;
 	
@@ -29,7 +28,9 @@ public class AdminPortalTest1stPage extends AppPage {
  	{
 		hoverOverElementUsingJS(Title);
 		Title.click();
+		
 		Statuses.click();
+		
 		
  	}
 	
@@ -38,11 +39,11 @@ public class AdminPortalTest1stPage extends AppPage {
 	
 	public void clickPriorities() throws InterruptedException
  	{
-		sleep();
+		sleep(); 
 		hoverOverElementUsingJS(Title);
-		Title.click();
+		Title.click(); 
 		hoverOverElementUsingJS(Priorities);
-		Priorities.click();
+		Priorities.click(); 
 		
  	}
 	
@@ -134,6 +135,7 @@ public class AdminPortalTest1stPage extends AppPage {
 	}
 	
 	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[1]/section[1]/section[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[9]/td[2]")
+	
 	private WebElement NewPriority;
 	
 	public void clickNewPriority() {
@@ -149,6 +151,7 @@ public class AdminPortalTest1stPage extends AppPage {
 	}
 	
 	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[1]/header[1]/div[2]/nav[1]/div[7]/div[1]/div[1]")
+	
 	private WebElement PriorityDescription;
 	
 	public void enterPriorityDescription(String text) {
@@ -179,12 +182,14 @@ public class AdminPortalTest1stPage extends AppPage {
 		hoverOverElementUsingJS(pqr);
 	    pqr.click();
 	    sleep();
+	    
 	    sleep();
 	    
 	}	
 	
 	public void ClickAddedPriority(String xpath) throws InterruptedException {
 		sleep();
+		
 		String priority = "//span[contains(text(),'"+xpath+"')]";
 	    scrolltoElement(priority);
 	    driver.findElement(By.xpath(priority)).click();
