@@ -45,7 +45,6 @@ static class BasePage {
         public void verifyHomePage() {
         	
             if (!driver.getCurrentUrl().equals("https://www.happyfox.com/home")) {
-            	
                 throw new IllegalStateException("Not on the home page");
             }
         }
