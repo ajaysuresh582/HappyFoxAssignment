@@ -96,30 +96,30 @@ public void loginasAdmin() {
   public void TestCase1() {
 		try {
 			String Classname = getClass().getSimpleName();
-          System.out.println("start of method : " + Classname);
-          hpAdminPortalTest1=hploginpage.validatePendingTicketsTitle();
-          hpAdminPortalTest1.clickStatus();
-          hpAdminPortalTest1.clickNewStatus();
-          System.out.println("New Status process started");
-          hpAdminPortalTest1.enterStatusName(statusName);
-          System.out.println("status name entered");
+			System.out.println("start of method : " + Classname);
+			hpAdminPortalTest1=hploginpage.validatePendingTicketsTitle();
+			hpAdminPortalTest1.clickStatus();
+			hpAdminPortalTest1.clickNewStatus();
+			System.out.println("New Status process started");
+			hpAdminPortalTest1.enterStatusName(statusName);
+			System.out.println("status name entered");
           //hpAdminPortalTest1.enterStatusColour("#21d0d5"); //#21d0d5 skyblue, #21d567 green
-          System.out.println("colour set");
-          hpAdminPortalTest1.enterBehavior("Pending");
-          hpAdminPortalTest1.enterStatusDescription("Status when a new issue ticket is created in HappyFox");
-          System.out.println("description added");
-          hpAdminPortalTest1.clickAddStatus();
-          System.out.println("Status added");
-          hpAdminPortalTest1.setDefaultStatus(statusName); 
-          hpAdminPortalTest1.clickPrioritySection();
-          hpAdminPortalTest1.clickNewPriority();
-          System.out.println("New priority process started");
-          hpAdminPortalTest1.enterPriorityName(priorityName);
-          hpAdminPortalTest1.enterPriorityDescription("Priority of the newly created tickets");
-          hpAdminPortalTest1.enterPriorityHelpText("priority helptext");
-          hpAdminPortalTest1.clickAddPriority();
-          hpAdminPortalTest1.setDefaultPriroity(priorityName);
-          System.out.println("Priority added");    
+			System.out.println("colour set");
+			hpAdminPortalTest1.enterBehavior("Pending");
+			hpAdminPortalTest1.enterStatusDescription("Status when a new issue ticket is created in HappyFox");
+			System.out.println("description added");
+			hpAdminPortalTest1.clickAddStatus();
+			System.out.println("Status added");
+			hpAdminPortalTest1.setDefaultStatus(statusName); 
+			hpAdminPortalTest1.clickPrioritySection();
+          	hpAdminPortalTest1.clickNewPriority();
+          	System.out.println("New priority process started");
+          	hpAdminPortalTest1.enterPriorityName(priorityName);
+          	hpAdminPortalTest1.enterPriorityDescription("Priority of the newly created tickets");
+          	hpAdminPortalTest1.enterPriorityHelpText("priority helptext");
+          	hpAdminPortalTest1.clickAddPriority();
+          	hpAdminPortalTest1.setDefaultPriroity(priorityName);
+          	System.out.println("Priority added");    
 		} 
 		
 		catch (Throwable e) {
