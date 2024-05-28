@@ -23,7 +23,6 @@ public SupportPortalPage hpSupportPortalPage;
 public AdminPortalTest1stPage hpAdminPortalTest1;
 public AdminPortalTest2ndPage hpAdminPortalTest2;
 
-
 public String AdminPortalURL = "https://interview.supporthive.com/staff";
 public static String SupportTicketURL = "https://interview.supporthive.com/new/";
 public static String browser = "Chrome";
@@ -35,6 +34,7 @@ public static String Subject = "Test Ticket raised by XYZ";
 public static String Message = "Hi, i am having certain issues in the Happy fox portal. Can you please help me.";
 public static String FullName = "Reese Harrold";
 public static String Email = "testno100@gmail.com";
+
 
 public void loginasAdmin() {
     
